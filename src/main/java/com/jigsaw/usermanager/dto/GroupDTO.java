@@ -2,7 +2,6 @@ package com.jigsaw.usermanager.dto;
 
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import com.fasterxml.jackson.annotation.JsonInclude;
-import jakarta.persistence.Column;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -14,10 +13,10 @@ import java.io.Serializable;
 @AllArgsConstructor
 @JsonIgnoreProperties({"createDate", "lastModifiedDate"})
 @JsonInclude(JsonInclude.Include.NON_NULL)
-public class UserDTO implements Serializable {
+public class GroupDTO implements Serializable {
 
-    private Integer userId;
-    public String firstname;
-    public String lastname;
-    public String email;
+    private Integer groupId;
+    public String groupName;
+    public String description;
 }
+
